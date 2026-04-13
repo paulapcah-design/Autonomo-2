@@ -1,75 +1,82 @@
 import random
 
-# Lista de opciones posibles
+# Lista de opciones del juego
 opciones = ["piedra", "papel", "tijera"]
+
+def mostrar_opciones():
+    """
+    Esta función muestra las opciones disponibles al usuario
+    usando un bucle FOR con la variable i.
+    """
+    print("Opciones disponibles:")
+    for i in range(len(opciones)):  # uso de FOR + variable i
+        print(f"{i + 1}. {opciones[i]}")
+
 
 def obtener_eleccion_usuario():
     """
-    Esta función solicita al usuario que ingrese su elección.
-    Valida que la opción sea correcta antes de devolverla.
+    Esta función solicita la elección del usuario.
+    Usa WHILE para repetir hasta que ingrese un valor válido.
+    También utiliza IF, OR e IN para validar la entrada.
     """
-    while True:
-        eleccion = input("Elige piedra, papel o tijera: ").lower()
-        if eleccion in opciones:
-            return eleccion
+    while True:  # uso de WHILE
+        mostrar_opciones()
+        eleccion = input("Elige (piedra, papel o tijera): ").lower()
+
+        # Validación usando IF + OR + IN
+        if eleccion == "piedra" or eleccion == "papel" or eleccion == "tijera":
+            if eleccion in opciones:  # uso de IN
+                return eleccion
         else:
-            print("Opción inválida. Intenta de nuevo.")
+            print("Entrada inválida, intenta de nuevo.\n")
 
 
 def obtener_eleccion_computadora():
     """
-    Esta función genera una elección aleatoria para la computadora
-    utilizando la librería random.
+    Esta función selecciona una opción aleatoria para la computadora.
     """
     return random.choice(opciones)
 
 
 def determinar_ganador(usuario, computadora):
     """
-    Esta función compara las elecciones del usuario y la computadora
-    y determina el resultado del juego.
-    Retorna un mensaje indicando si el usuario gana, pierde o empata.
+    Determina el resultado del juego usando estructuras IF.
     """
     if usuario == computadora:
         return "Empate"
     
-    elif (usuario == "piedra" and computadora == "tijera") or \
-         (usuario == "papel" and computadora == "piedra") or \
-         (usuario == "tijera" and computadora == "papel"):
+    if (usuario == "piedra" and computadora == "tijera") or \
+       (usuario == "papel" and computadora == "piedra") or \
+       (usuario == "tijera" and computadora == "papel"):
         return "Ganaste"
     
-    else:
-        return "Perdiste"
+    return "Perdiste"
 
 
 def jugar():
     """
-    Función principal del juego.
-    Controla el flujo del programa usando un bucle while para permitir
-    múltiples rondas hasta que el usuario decida salir.
+    Función principal que controla el juego completo.
+    Usa WHILE para permitir múltiples rondas.
     """
-    while True:
-        print("\n--- Piedra, Papel o Tijera ---")
-        
-        # Obtener elecciones
+    while True:  # uso de WHILE
+        print("\n--- Juego Piedra, Papel o Tijera ---")
+
         usuario = obtener_eleccion_usuario()
         computadora = obtener_eleccion_computadora()
-        
-        # Mostrar elecciones
+
         print(f"Tú elegiste: {usuario}")
         print(f"La computadora eligió: {computadora}")
-        
-        # Determinar resultado
+
         resultado = determinar_ganador(usuario, computadora)
-        print(f"Resultado: {resultado}")
-        
-        # Preguntar si desea seguir jugando
+        print("Resultado:", resultado)
+
+        # Preguntar si quiere continuar
         continuar = input("¿Quieres jugar otra vez? (s/n): ").lower()
-        
+
         if continuar != "s":
-            print("Gracias por jugar 👋")
+            print("Fin del juego ")
             break
 
 
-# Ejecutar el juego
+# Ejecutar el programa
 jugar()
