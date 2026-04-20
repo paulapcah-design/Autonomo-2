@@ -38,3 +38,12 @@ El programa está diseñado bajo un enfoque modular utilizando funciones:
 - Visual Studio Code (editor de código)
 - GitHub (Repositorio)
 
+## Aplicación de Conceptos
+
+Este proyecto integra conocimientos de:
+Resolución de problemas
+Algoritmos y diagramas de flujo
+Condicionales y operadores lógicos
+Bucles (while, for)
+Estructuras de datos (listas)
+Funciones y modularidad
