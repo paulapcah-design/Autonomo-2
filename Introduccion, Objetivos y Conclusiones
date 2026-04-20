@@ -1,0 +1,37 @@
+Introducción:
+
+El presente proyecto consiste en el desarrollo de un programa en Python que simula el juego “Piedra, Papel o Tijera”, 
+permitiendo la interacción entre el usuario y la computadora. Su propósito es aplicar de manera práctica los conceptos 
+básicos de programación estudiados durante el curso.
+
+Para su desarrollo se utilizaron estructuras de control como condicionales y bucles, así como el uso de funciones y 
+estructuras de datos. Además, se implementó una lógica que permite validar la entrada del usuario y determinar el resultado
+del juego de forma automática.
+
+Este proyecto integra los conocimientos adquiridos en las diferentes unidades de la asignatura, demostrando cómo la 
+programación puede ser utilizada para resolver problemas de manera estructurada y eficiente.
+
+
+
+Objetivo: 
+
+Desarrollar un programa interactivo en Python que simule el juego “Piedra, Papel o Tijera”, aplicando
+principios de programación estructurada, incluyendo el uso de algoritmos, estructuras de control,
+manejo de datos y funciones, con el fin de consolidar los conocimientos adquiridos durante el curso.
+
+
+
+Conclusiones:
+
+El programa desarrollado demuestra un uso de las estructuras de control como condicionales 
+y bucles, lo que permite que el juego funcione de manera lógica y ordenada. El uso del ciclo while
+hace posible repetir el juego varias veces, mientras que las condiciones if permiten decidir 
+correctamente el resultado en cada partida.
+
+La organización del código mediante funciones facilita su comprensión y mejora su estructura. Cada 
+función cumple una tarea específica, lo que permite que el programa sea más claro, fácil de mantener 
+y de modificar en caso de futuras mejoras.
+
+El uso de listas y la librería random permite manejar las opciones del juego de manera eficiente y 
+generar elecciones aleatorias para la computadora. Esto hace que el programa sea dinámico y más 
+interactivo para el usuario.
