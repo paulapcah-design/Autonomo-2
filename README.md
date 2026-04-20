@@ -4,9 +4,7 @@ FECHA:
 19/04/2026
 
 # Juego Piedra, Papel o Tijera en Python
-
 ## Objetivo del Programa
-
 Desarrollar un programa interactivo en Python que permita simular el juego "Piedra, Papel o Tijera" entre un usuario y la computadora, aplicando conceptos fundamentales de programación como estructuras de control, manejo de datos, algoritmos y funciones.
 
 ## Funcionalidades Principales
